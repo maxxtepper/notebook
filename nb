@@ -1,0 +1,36 @@
+#!/bin/bash
+
+_PWD=$PWD
+_TYPE=$1
+_NOW=$(date +"%y%m%d_%H%M%S")
+_NOTE=$_TYPE\_$_NOW.note
+_BOOK=$_TYPE
+_SWP=$_PWD/.$NOTE.swp
+_HOME=$HOME/notebook
+
+if [ -d "$_HOME" ]; then
+
+	touch $_SWP
+	vim $_NOTE
+
+	if [ -d "$_HOME/$_TYPE"]; then
+
+		mv $_NOTE "$_HOME/$_BOOK/$_NOTE"
+		rm $_SWP
+
+	else
+		
+		mkdir "$_HOME/$_BOOK"
+
+	fi
+
+else
+
+	mkdir $_HOME
+
+fi
+
+# I can read faster than these instructions. 
+# I build the instructions to find your instructions.
+# That is why I want the secrets.
+
