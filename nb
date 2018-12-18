@@ -8,29 +8,36 @@ _SWP=$"$_PWD/.$NOTE.swp"
 _HOME="$HOME/notebook"
 _BOOK="$_HOME/$_TYPE"
 
-if [ -d "$_HOME" ]; then
+if [ $# -eq 0 ]; then
 
-	touch $_SWP
-	vim $_NOTE
-
-	if [ -d "$_BOOK" ]; then
-
-		mv $_NOTE "$_BOOK/$_NOTE"
-		rm $_SWP
-
-	else
-		
-		mkdir "$_BOOK"
-
-	fi
+	echo "$(ls $_HOME)"
 
 else
 
-	mkdir $_HOME
+	if [ -d "$_HOME" ]; then
+
+		touch $_SWP
+		vim $_NOTE
+
+		if [ -d "$_BOOK" ]; then
+
+			mv $_NOTE "$_BOOK/$_NOTE"
+			rm $_SWP
+
+		else
+			
+			mkdir "$_BOOK"
+
+		fi
+
+	else
+
+		mkdir $_HOME
+
+	fi
 
 fi
-
-# I can read faster than these instructions. 
-# I build the instructions to find your instructions.
-# That is why I want the secrets.
+	# I can read faster than these instructions. 
+	# I build the instructions to find your instructions.
+	# That is why I want the secrets.
 
