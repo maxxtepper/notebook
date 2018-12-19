@@ -27,6 +27,8 @@ else
 		else
 			
 			mkdir "$_BOOK"
+			mv $_NOTE "$_BOOK/$_NOTE"
+			rm $_SWP
 
 		fi
 
