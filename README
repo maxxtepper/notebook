@@ -1,1 +1,14 @@
 This is the README for notebook
+
+notebook is a simple console application that allows the user to quickly create notes that are added to a notebook with a timestamp of its creation. the name of the note is the notebook name plus the time stamp. Example uses:
+
+nb thought
+
+What happens:
+
+$HOME/notebook is created if not already existing
+touch thought_time_stamp.note is created wherever the user is, along with a swp of it
+once the note is saved and closed, it is moved:
+$HOME/notebook/thought if not already existing
+
+thats it so far
