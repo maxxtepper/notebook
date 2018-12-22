@@ -10,7 +10,7 @@ _BOOK="$_HOME/$_TYPE"
 
 if [ $# -eq 0 ]; then
 
-	echo "$(ls $_HOME)"
+	echo "PRINT HELP COMING!!!"
 
 else
 
