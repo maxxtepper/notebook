@@ -4,7 +4,6 @@ _PWD=$PWD
 _TYPE=$1
 _NOW=$(date +"%y%m%d_%H%M%S")
 _NOTE="${_TYPE}_${_NOW}.note"
-_SWP=$"$_PWD/.$NOTE.swp"
 _HOME="$HOME/notebook"
 _BOOK="$_HOME/$_TYPE"
 
@@ -16,19 +15,16 @@ else
 
 	if [ -d "$_HOME" ]; then
 
-		touch $_SWP
 		vim $_NOTE
 
 		if [ -d "$_BOOK" ]; then
 
 			mv $_NOTE "$_BOOK/$_NOTE"
-			rm $_SWP
 
 		else
 			
 			mkdir "$_BOOK"
 			mv $_NOTE "$_BOOK/$_NOTE"
-			rm $_SWP
 
 		fi
 
