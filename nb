@@ -8,34 +8,14 @@ _HOME="$HOME/notebook"
 _BOOK="$_HOME/$_TYPE"
 
 if [ $# -eq 0 ]; then
-
 	echo "$(ls $_HOME)"
-
 else
-
-	if [ -d "$_HOME" ]; then
-
-		vim $_NOTE
-
-		if [ -d "$_BOOK" ]; then
-
-			mv $_NOTE "$_BOOK/$_NOTE"
-
-		else
-			
-			mkdir "$_BOOK"
-			mv $_NOTE "$_BOOK/$_NOTE"
-
-		fi
-
-	else
-
+	if [ ! -d "$_HOME" ]; then
 		mkdir $_HOME
-
 	fi
 
+	if [ ! -d "$_BOOK" ]; then
+		mkdir "$_BOOK"
+	fi
+	vim "$_BOOK/$_NOTE"
 fi
-	# I can read faster than these instructions. 
-	# I build the instructions to find your instructions.
-	# That is why I want the secrets.
-

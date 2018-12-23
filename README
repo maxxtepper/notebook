@@ -7,8 +7,7 @@ nb thought
 What happens:
 
 $HOME/notebook is created if not already existing
-touch thought_time_stamp.note is created wherever the user is, along with a swp of it
-once the note is saved and closed, it is moved:
-$HOME/notebook/thought if not already existing
+touch thought_time_stamp.note is created at $HOME/notebook/thought/
+vim thought_time_stamp.note
 
 thats it so far
